@@ -237,7 +237,7 @@
 			color: #444;
 			text-align: left;
 			border: none;
-			border-top: solid 1px #efefef;
+			border-bottom: solid 1px #efefef;
 			height: 50px;
 			line-height: 50px;
 			font-size: 25px;
@@ -249,7 +249,7 @@
 
 		.jobs .ui-accordion-header:hover{
 			opacity: 1;
-			border-bottom: 1px solid #fc0;
+			border-color:#fc0;
 		}
 
 		
@@ -263,7 +263,7 @@
 			line-height: 1.5;
 			/* font-family: Play, sans-serif; */
 			/* background-color: #efefef; */
-			/* border-bottom: 1px solid #efefef; */
+			 border-bottom: 1px solid #efefef; 
 		}
 
 		#accordion{
@@ -368,6 +368,17 @@
 		.article h2{
 			font-size: 35px;
 			margin: 30px 0;
+		}
+
+		.article h3{
+			font:600 17px 'Open Sans', sans-serif;
+			text-align: left;
+			margin-bottom: 15px;
+		}
+
+		.article p{
+			text-indent: 2em;
+    		text-align: justify;
 		}
 
 		.article .left img.main-img{
