@@ -1,0 +1,9 @@
+header, .brands{
+    background: url(../images/black-70.png) repeat 0 0;
+}
+.shop__desc{
+    background: url(../images/black-80.png) repeat 0 0;
+}
+.btn-carousel, .prod-box_shop, .overlay{
+    background: url(../images/black-50.png) repeat 0 0;
+}

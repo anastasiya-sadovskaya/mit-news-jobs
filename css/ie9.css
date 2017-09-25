@@ -1,0 +1,6 @@
+.grayscale img{
+    filter: gray;
+}
+/*&.active img, &:hover img{*/
+      /*filter: grayscale(0%);*/
+/*}*/

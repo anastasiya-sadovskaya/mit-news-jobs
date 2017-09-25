@@ -1,0 +1,225 @@
+        
+		ul, li {
+			list-style-type: disc;
+			margin-left: 20px;
+		}
+		
+		ol li {
+			list-style-type: decimal;
+			margin-left: 20px;
+		}
+
+		
+		html{
+            height: 100%;
+        }
+
+		body{
+			/*background-image: url(images/top-bg.jpg);
+		    
+		    background-repeat: no-repeat;
+		    background-position: 50% 50%;
+		    background-attachment: fixed;
+		    background-size: cover;*/
+			background-color: #fff;
+            padding-top: 0;
+		    width: 100%;
+            height: 100%;
+		}
+
+		.header{
+			position: fixed;
+			top:0;
+			height:70px;
+			width:100%;
+			left:0;
+			right:0;
+			background-color: #252525;
+			box-shadow:none;
+		}
+/*
+		.footer-whole{
+			position:fixed;
+			bottom:0;
+			width:100%;
+		}*/
+
+		.main{
+			/*text-align: center;*/
+		    /* top: 71px; */
+		    width: 100%;
+            padding-top: 70px;
+            min-height: calc(100% - 70px - 190px);
+		    /* display: flex; */
+		    /* flex-direction: column; */
+		    /* justify-content: center; */
+		    /* align-items: center; */
+		}
+
+        .footer-whole{
+            padding: 0 20px;
+            background: #252525;
+            height: 190px;
+        }
+
+        .footer_top .wrapper .footer-top-list .footer-top-item_1{
+            width: 25%;
+        }
+
+        .disable-screen{
+            position: fixed;
+            top: 0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 100000;
+            display: none;
+        }
+
+		h1{
+			margin: 0 auto;
+			padding: 40px;
+			font: 600 49px "Play",sans-serif;
+			color: #fc0;
+			background: #252525;
+			height: 60px;
+			box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+		}
+
+		.main p{
+			margin-bottom: 30px;
+		}
+
+		.main a{
+			color:#cacaca;
+			cursor:pointer;
+			text-decoration: none;
+		}
+
+		.articles{
+			max-width: 1200px;
+			display: block;
+			margin: 0 auto;
+			background-color: #fff;
+		}
+
+		.articles h2{
+			margin: 10px 0;
+    		font-size: 30px;
+            line-height: 1.2;
+		}
+
+		a.article-item{
+			position: relative;
+			display: block;
+			padding: 20px;
+			/*margin: 10px 0; */
+			color: #444;
+			box-sizing: border-box;
+			border-bottom: solid 1px #efefef;
+			opacity: 0.85;
+		}
+
+		a.article-item:hover h2{
+			color: #252525;
+		}
+
+		a.article-item:hover{
+			border-bottom-color: #fc0;
+			color: #444;;
+			/*outline:  solid 3px #fc0;
+			outline-offset: -3px;*/
+			/*background-color: #f9f9f9;*/
+			
+			opacity: 1;
+		} 
+
+		.article-item:after{
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		.left{
+			float: left;
+			width: 30%;
+		}
+
+		.left img{
+			max-width: 100%;
+			height: auto;
+		}
+
+		.right{
+			float: left;
+			width: 70%;
+			padding-left: 50px;
+			box-sizing: border-box;
+		}
+
+		.date{
+			color: #aeaeae;
+		}
+
+		.read-more{
+			position: absolute;
+			bottom: -20px;
+			right: 70px;
+			font-weight: 400;
+			-webkit-transition: right 0.3s ease-out 0s;
+			-moz-transition: right 0.3s ease-out 0s;
+			-o-transition: right 0.3s ease-out 0s;
+			transition: right 0.3s ease-out 0s;
+		}
+
+		i{
+			position: absolute;
+			top: 0;
+			right: -20px;
+			/*-webkit-transition: right 0.3s ease-out 0s;
+			-moz-transition: right 0.3s ease-out 0s;
+			-o-transition: right 0.3s ease-out 0s;
+			transition: right 0.3s ease-out 0s;*/
+		}
+
+		.article-item:hover .read-more{
+			color:#fc0;
+			right: 40px;
+			font-weight: 600;
+		}
+
+		/*.article-item:hover i{
+			right: -35px;
+		}*/
+
+        .content{
+            position: fixed;
+            top: 10%;
+            left: 25%;
+            width: 50%;
+            min-height: 50%;
+            max-height: 80%;
+            background-color: #fff;
+            /*border: solid 3px #fc0;*/
+            z-index: 1000000;
+            display: none;
+            padding: 10px 30px;
+            overflow-y: scroll;
+        }
+
+        i.fa.close{
+            position: fixed;
+            top: 10%;
+            left: 75%;
+            z-index: 10000000;
+            padding: 15px;
+            color: #ce2727;
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+        }
+
+        i.fa.close:hover{
+
+        }
