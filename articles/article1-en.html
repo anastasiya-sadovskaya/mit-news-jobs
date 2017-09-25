@@ -12,10 +12,9 @@
 	<!--[if IE 8]><html lang="en" class="ie8"><![endif]-->
 	<!--[if IE 9]><html lang="en" class="ie9"><![endif]-->
 
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/vendor.css">
-	<link rel="stylesheet" href="css/jquery-ui.css">
-	<link rel="stylesheet" href="css/news.css">
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/vendor.css">
+	<link rel="stylesheet" href="../css/news.css">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -38,11 +37,9 @@
 
 	<!--<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>-->
 	<!--<script src="js/jquery.tmpl.js"></script>-->
-	<script src="js/jquery-1.8.2.min.js"></script>
-	<script src="js/jsrender.min.js"></script>
-	<script src="js/jobs.js"></script>
-	<script src="js/jquery-ui.js"></script>
-
+	<script src="../js/jquery-1.8.2.min.js"></script>
+	<script src="../js/jsrender.min.js"></script>
+	<script src="../js/news.js"></script>
 
 
 	<!-- Yandex.Metrika counter -->
@@ -64,8 +61,8 @@
 				<a href="index.html" title="MiT Power Systems"></a>
 			</div>
 			<div class="lang">
-				<a href="jobs.html" class="active">Ру</a>
-				<a href="jobs-en.html">En</a>
+				<a href="article1.html">Ру</a>
+				<a href="article1-en.html" class="active">En</a>
 			</div>
 			<div class="header__phone">
 				+7 910-000-77-92<br/>
@@ -73,13 +70,13 @@
 			</div>
 			<div class="navigation">
 				<ul>
-					<li><a class="scroll" href="index.html#about" title="О компании">О компании</a></li>
-					<li><a class="scroll" href="index.html#products" title="Продукция">Продукция</a></li>
-					<li><a class="scroll" href="index.html#service" title="Сервис">Сервис</a></li>
-					<li><a href="#" title="Вакансии">Вакансии</a></li>
-					<li><a href="news.html" title="Новости">Новости</a></li>
+					<li><a class="scroll" href="index-en.html#about" title="О компании">ABOUT COMPANY</a></li>
+					<li><a class="scroll" href="index-en.html#products" title="Продукция">PRODUCTS</a></li>
+					<li><a class="scroll" href="index-en.html#service" title="Сервис">SERVICE</a></li>
+					<li><a href="jobs-en.html" title="Вакансии">JOBS</a></li>
+					<li><a href="news-en.html" title="Новости">NEWS</a></li>
 					<!-- <li><a href="tmp.html" title="Акции">Акции</a></li> -->
-					<li><a class="scroll" href="index.html#contacts" title="Контакты">Контакты</a></li>
+					<li><a class="scroll" href="index-en.html#contacts" title="Контакты">CONTACTS</a></li>
 				</ul>
 			</div>
 		</div>
@@ -88,52 +85,32 @@
 	<!--======================================================================================-->
 
 	<div class="main" id="main">
-		<h1>Вакансии</h1>
-			<div class="jobs" id="jobs">
-				<div id="accordion"></div>
-			</div>
-		</div>
+		<h1>Новости</h1>
 
+		<div class="article" id="article">
+
+		</div>
 
 	</div>
 
-	<script id="jobsTmpl" type="text/x-jquery-tmpl">
-				<h3>{{:title}}
-					<!-- <span class="plus">+</span> -->
-					<i class="fa fa-caret-down plus" aria-hidden="true"></i>
-				</h3>
-				<div style="display: none;" class='info'>
-					<p>{{:description}}</p>
-					<div class='row'>
-						<div  class = 'block requirements left'>
-							<span> Требования к кандидату:</span>
-							<ul>{{:requirements}}</ul>
-						</div>
-						<div  class = 'block duties right'>
-							<span> Обязанности: </span>
-							<ul>{{:duties}}</ul>
-						</div>
-					</div>
-					<div class='row'>
-						<div  class = 'block conditions left'>
-							<span> Условия работы:</span>
-							<ul>{{:conditions}}</ul>
-						</div>
-						<div  class = 'block additional right'>
-							<span> Тип занятости:</span>
-							<ul>{{:typeOfEmployment}}</ul>
-							<span> Уровень заработной платы:</span>
-							<ul>{{:salary}}</ul>
-						</div>
-					</div>
-				</div>
+	<script id="articleTmpl" type="text/x-jquery-tmpl">
+		<div class="left">
+				<img src={{:src}} class="main-img">
+			</div>
+			<div class="right">
+				<h2 class="article-title">{{:title}}</h2>
+				<div>{{:content}}</div>
+			</div>
+		
+		<!--<i class="close fa fa-times" aria-hidden="true"></i>-->
+
 	</script>
 	<script type="text/javascript">
-		var template = $.templates("#jobsTmpl");
+		var template = $.templates("#articleTmpl");
 
-		var htmlOutput = template.render(jobs);
+		var htmlOutput = template.render(news[0]);
 
-		$("#accordion").html(htmlOutput);
+		$("#article").html(htmlOutput);
 	</script>
 
 
@@ -148,13 +125,13 @@
 						<span class="title">
 							MiT Power Systems
 						</span>
-						<p>115432, г.Москва,<br>ул.Трофимова, дом 21, корпус 2</p>
+						<p>115432, Moscow City,<br>Trofimova St., bldg. 21, block 2</p>
 					</div>
 					<div class="footer-top-item_2">
-						<p class="phone">+7 910-000-77-92 <span>моб.</span><br>+7 495-115-50-65</p>
+						<p class="phone">+7 910-000-77-92 <span>mob.</span><br>+7 495-115-50-65</p>
 					</div>
 					<div class="footer-top-item_3">
-						<p>Пн-Пт: 09:00 - 18:00<br>Выходные: суббота, воскресенье</p>
+						<p>Monday to Friday: 09:00 - 18:00<br>Days-off: Saturday, Sunday</p>
 					</div>
 					<div class="footer-top-item_4">
 						<a class="email" href="mailto:info@mitps.ru" title="Написать нам" onclick="yaCounter35635930.reachGoal('emailclick');">info@mitps.ru</a>
@@ -165,14 +142,14 @@
 
 		<div class="footer">
 			<div class="wrapper">
-				<p>© 2015 MiT Power Systems. Все права защищены.</p>
+				<p>© 2015 MiT Power systems. All rights reserved.</p>
 				<div class="footer__logo">
 					<a href="http://lepshey.ru/" title="Дизайн и разработка сайта Lepshey"></a>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src='js/actions.js'></script>
+	<script src='../js/actions.js'></script>
 
 </body>
 
