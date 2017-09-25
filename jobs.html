@@ -76,8 +76,8 @@
 					<li><a class="scroll" href="index.html#about" title="О компании">О компании</a></li>
 					<li><a class="scroll" href="index.html#products" title="Продукция">Продукция</a></li>
 					<li><a class="scroll" href="index.html#service" title="Сервис">Сервис</a></li>
-					<li><a href="jobs.html" title="Вакансии">Вакансии</a></li>
-					<li><a href="#" title="Новости">Новости</a></li>
+					<li><a href="#" title="Вакансии">Вакансии</a></li>
+					<li><a href="news.html" title="Новости">Новости</a></li>
 					<!-- <li><a href="tmp.html" title="Акции">Акции</a></li> -->
 					<li><a class="scroll" href="index.html#contacts" title="Контакты">Контакты</a></li>
 				</ul>
@@ -88,18 +88,44 @@
 	<!--======================================================================================-->
 
 	<div class="main" id="main">
-		
+		<h1>Вакансии</h1>
 			<div class="jobs" id="jobs">
-				<div id="accordion">
+				<div id="accordion"></div>
 			</div>
 		</div>
+
 
 	</div>
 
 	<script id="jobsTmpl" type="text/x-jquery-tmpl">
-				<h3>{{:title}}</h3>
-				<div style="display: none;">
-					<p>{{:str}}</p>
+				<h3>{{:title}}
+					<!-- <span class="plus">+</span> -->
+					<i class="fa fa-caret-down plus" aria-hidden="true"></i>
+				</h3>
+				<div style="display: none;" class='info'>
+					<p>{{:description}}</p>
+					<div class='row'>
+						<div  class = 'block requirements left'>
+							<span> Требования к кандидату</span>
+							<ul>{{:requirements}}</ul>
+						</div>
+						<div  class = 'block duties right'>
+							<span> Обязанности </span>
+							<ul>{{:duties}}</ul>
+						</div>
+					</div>
+					<div class='row'>
+						<div  class = 'block conditions left'>
+							<span> Условия работы</span>
+							<ul>{{:conditions}}</ul>
+						</div>
+						<div  class = 'block additional right'>
+							<span> Тип занятости</span>
+							<ul>{{:typeOfEmployment}}</ul>
+							<span> Уровень заработной платы</span>
+							<ul>{{:salary}}</ul>
+						</div>
+					</div>
 				</div>
 	</script>
 	<script type="text/javascript">

@@ -12,9 +12,9 @@
 	<!--[if IE 8]><html lang="en" class="ie8"><![endif]-->
 	<!--[if IE 9]><html lang="en" class="ie9"><![endif]-->
 
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/vendor.css">
-	<link rel="stylesheet" href="css/news.css">
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/vendor.css">
+	<link rel="stylesheet" href="../css/news.css">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -37,9 +37,9 @@
 
 	<!--<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>-->
 	<!--<script src="js/jquery.tmpl.js"></script>-->
-	<script src="js/jquery-1.8.2.min.js"></script>
-	<script src="js/jsrender.min.js"></script>
-	<script src="js/news.js"></script>
+	<script src="../js/jquery-1.8.2.min.js"></script>
+	<script src="../js/jsrender.min.js"></script>
+	<script src="../js/news.js"></script>
 
 
 	<!-- Yandex.Metrika counter -->
@@ -70,13 +70,13 @@
 			</div>
 			<div class="navigation">
 				<ul>
-					<li><a class="scroll" href="index.html#about" title="О компании">О компании</a></li>
-					<li><a class="scroll" href="index.html#products" title="Продукция">Продукция</a></li>
-					<li><a class="scroll" href="index.html#service" title="Сервис">Сервис</a></li>
-					<li><a href="jobs.html" title="Вакансии">Вакансии</a></li>
-					<li><a href="#" title="Новости">Новости</a></li>
+					<li><a class="scroll" href="../index.html#about" title="О компании">О компании</a></li>
+					<li><a class="scroll" href="../index.html#products" title="Продукция">Продукция</a></li>
+					<li><a class="scroll" href="../index.html#service" title="Сервис">Сервис</a></li>
+					<li><a href="../jobs.html" title="Вакансии">Вакансии</a></li>
+					<li><a href="../news.html" title="Новости">Новости</a></li>
 					<!-- <li><a href="tmp.html" title="Акции">Акции</a></li> -->
-					<li><a class="scroll" href="index.html#contacts" title="Контакты">Контакты</a></li>
+					<li><a class="scroll" href="../index.html#contacts" title="Контакты">Контакты</a></li>
 				</ul>
 			</div>
 		</div>
@@ -87,40 +87,30 @@
 	<div class="main" id="main">
 		<h1>Новости</h1>
 
-		<div class="articles" id="articles">
+		<div class="article" id="article">
 
 		</div>
 
 	</div>
 
-	<script id="newsTmpl" type="text/x-jquery-tmpl">
-		<a href="articles/{{:link}}.html" class="article-item" target=_blank>
-			<div class="left">
-				<img src={{:src}}>
+	<script id="articleTmpl" type="text/x-jquery-tmpl">
+		<div class="left">
+				<img src={{:src}} class="main-img">
 			</div>
 			<div class="right">
-				<span class="date">{{:date}}</span>
 				<h2 class="article-title">{{:title}}</h2>
-				<p class="description">{{:description}}</p>
-				<p class="read-more">
-					<span>Подробнее</span>
-					<i>&#8594;</i>
-				</p>
+				<div>{{:content}}</div>
 			</div>
-		</a>
-		<!-- <div class="content">
-			<h2 class="article-title">{{:title}}</h2>
-			<div>{{:content}}</div>
-		</div> -->
+		
 		<!--<i class="close fa fa-times" aria-hidden="true"></i>-->
 
 	</script>
 	<script type="text/javascript">
-		var template = $.templates("#newsTmpl");
+		var template = $.templates("#articleTmpl");
 
-		var htmlOutput = template.render(news);
+		var htmlOutput = template.render(news[0]);
 
-		$("#articles").html(htmlOutput);
+		$("#article").html(htmlOutput);
 	</script>
 
 
@@ -159,7 +149,7 @@
 			</div>
 		</div>
 	</div>
-	<script src='js/actions.js'></script>
+	<script src='../js/actions.js'></script>
 
 </body>
 
